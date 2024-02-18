@@ -1,0 +1,36 @@
+.character-card {
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  height: 100%;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.character-card:hover {
+  box-shadow: rgba(151, 206, 76, 0.35) 0px -50px 36px -28px inset;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.character-card img {
+  border-radius: 1rem 1rem 0 0;
+}
+.c-info {
+  border-radius: 0 0 1rem 1rem;
+
+  padding: 1rem 1rem;
+}
+
+.v-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.character-icons {
+  display: flex;
+}
+
+.species {
+  opacity: 0.5;
+  font-style: italic;
+  font-size: small;
+}
