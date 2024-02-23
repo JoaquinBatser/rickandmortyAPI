@@ -4,9 +4,3 @@
   align-items: stretch;
   gap: 2rem;
 }
-
-.pagination {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}

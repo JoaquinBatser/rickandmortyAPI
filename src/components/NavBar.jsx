@@ -1,24 +1,41 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { GiPortal } from 'react-icons/gi'
 import '../css/NavBar.css'
 
 const NavBar = () => {
   return (
     <nav>
-      <NavLink to='/'>
-        <h2>home</h2>
+      <NavLink
+        className='home'
+        to='/'
+      >
+        <GiPortal
+          color='lightgreen'
+          size={40}
+        />
       </NavLink>
 
-      <NavLink to='/characters'>
-        <h2>Characters</h2>
-      </NavLink>
+      <ul>
+        <li>
+          <NavLink to='/characters'>
+            <p>Characters</p>
+          </NavLink>
+        </li>
 
-      <NavLink to='/locations'>
-        <h2>Locations</h2>
-      </NavLink>
-
-      <NavLink to='/episodes'>
-        <h2>Episodes</h2>
+        <li>
+          <NavLink to='/locations'>
+            <p>Locations</p>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to='/episodes'>
+            <p>Episodes</p>
+          </NavLink>
+        </li>
+      </ul>
+      <NavLink to='/about'>
+        <p>About</p>
       </NavLink>
     </nav>
   )
