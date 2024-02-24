@@ -1,5 +1,4 @@
 import React from 'react'
-import '../css/CharacterCard.css'
 import { FaMale } from 'react-icons/fa'
 import { FaFemale } from 'react-icons/fa'
 import { FaSkull } from 'react-icons/fa'
@@ -7,15 +6,16 @@ import { FaHeart } from 'react-icons/fa'
 import { FaQuestion } from 'react-icons/fa'
 const CharacterCard = ({ character }) => {
   return (
-    <div className='character-card'>
+    <div className='rounded'>
       <img
+        className='rounded-lg'
         src={character.image}
         alt=''
       />
-      <div className='c-info'>
-        <div className='v-info'>
-          <p>{character.name}</p>
-          <div className='character-icons'>
+      <div className='p-2'>
+        <div className='flex items-center justify-between'>
+          <p className=' font-semibold tracking-wide'>{character.name}</p>
+          <div className='flex'>
             {character.gender === 'Male' && <FaMale />}
             {character.gender === 'Female' && <FaFemale />}
 
@@ -25,7 +25,7 @@ const CharacterCard = ({ character }) => {
           </div>
         </div>
 
-        <p className='species'>{character.species}</p>
+        <small className='italic opacity-45'>{character.species}</small>
       </div>
     </div>
   )

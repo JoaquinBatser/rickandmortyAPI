@@ -1,14 +1,13 @@
 import './App.css'
 import Home from './pages/Home'
 import { Route, Routes } from 'react-router-dom'
-import Characters from './pages/Characters'
-import Locations from './pages/Locations'
-import Episodes from './pages/Episodes'
+
 import NavBar from './components/NavBar'
+import About from './pages/About'
 
 function App() {
   return (
-    <>
+    <main className='m-auto max-w-[1000px] px-12'>
       <NavBar />
       <Routes>
         <Route
@@ -16,19 +15,11 @@ function App() {
           element={<Home />}
         />
         <Route
-          path='/characters'
-          element={<Characters />}
-        />
-        <Route
-          path='/locations'
-          element={<Locations />}
-        />
-        <Route
-          path='/episodes'
-          element={<Episodes />}
+          path='/about'
+          element={<About />}
         />
       </Routes>
-    </>
+    </main>
   )
 }
 

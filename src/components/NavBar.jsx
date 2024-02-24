@@ -1,11 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { GiPortal } from 'react-icons/gi'
-import '../css/NavBar.css'
 
 const NavBar = () => {
   return (
-    <nav>
+    <nav className='flex h-20 items-center justify-between'>
       <NavLink
         className='home'
         to='/'
@@ -16,24 +15,6 @@ const NavBar = () => {
         />
       </NavLink>
 
-      <ul>
-        <li>
-          <NavLink to='/characters'>
-            <p>Characters</p>
-          </NavLink>
-        </li>
-
-        <li>
-          <NavLink to='/locations'>
-            <p>Locations</p>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to='/episodes'>
-            <p>Episodes</p>
-          </NavLink>
-        </li>
-      </ul>
       <NavLink to='/about'>
         <p>About</p>
       </NavLink>
